@@ -1,7 +1,3 @@
-'use client'
-
-import { useState, type FormEvent } from 'react'
-import { CheckCircle2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const fieldClass =
@@ -10,13 +6,6 @@ const fieldClass =
 const labelClass = 'text-sm font-medium text-foreground'
 
 export function ContactForm() {
-  const [submitted, setSubmitted] = useState(false)
-
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault()
-    setSubmitted(true)
-  }
-
   return (
     <section id="contact" className="mx-auto max-w-6xl px-6 py-20 md:py-28">
       <div className="mx-auto max-w-2xl overflow-hidden rounded-3xl border border-primary/30 bg-card/50 p-8 shadow-2xl sm:p-12">
@@ -30,19 +19,14 @@ export function ContactForm() {
           </p>
         </div>
 
-        {submitted ? (
-          <div className="mt-10 flex flex-col items-center gap-4 rounded-2xl border border-primary/30 bg-primary/[0.06] p-10 text-center">
-            <CheckCircle2 className="size-10 text-primary" />
-            <h3 className="text-xl font-semibold text-foreground">
-              Request received
-            </h3>
-            <p className="text-muted-foreground">
-              Thanks — our team will reach out within one business day to book
-              your free strategy session.
-            </p>
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="mt-10 flex flex-col gap-5">
+        <form
+          name="strategy-session"
+          method="POST"
+          action="/"
+          data-netlify="true"
+          className="mt-10 flex flex-col gap-5"
+        >
+          <input type="hidden" name="form-name" value="strategy-session" />
             <div className="grid gap-5 sm:grid-cols-2">
               <div className="flex flex-col gap-2">
                 <label htmlFor="name" className={labelClass}>
@@ -110,7 +94,6 @@ export function ContactForm() {
               Request a Free Strategy Session
             </Button>
           </form>
-        )}
       </div>
     </section>
   )
