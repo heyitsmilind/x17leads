@@ -22,13 +22,13 @@ export function ContactForm() {
 
     const params = new URLSearchParams()
     params.append('form-name', 'strategy-session')
-    params.append('fullName', fullName)
-    params.append('companyEmail', companyEmail)
-    params.append('websiteUrl', websiteUrl)
-    params.append('targetAudience', targetAudience)
+    params.append('Full Name', fullName)
+    params.append('Company Email', companyEmail)
+    params.append('Company Website URL', websiteUrl)
+    params.append('Target Audience', targetAudience)
 
     try {
-      const response = await fetch('/', {
+      const response = await fetch('/__forms.html', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: params.toString(),
@@ -80,7 +80,7 @@ export function ContactForm() {
                 </label>
                 <input
                   id="full-name"
-                  name="fullName"
+                  name="Full Name"
                   type="text"
                   required
                   autoComplete="name"
@@ -96,7 +96,7 @@ export function ContactForm() {
                 </label>
                 <input
                   id="company-email"
-                  name="companyEmail"
+                  name="Company Email"
                   type="email"
                   required
                   autoComplete="email"
@@ -114,7 +114,7 @@ export function ContactForm() {
               </label>
               <input
                 id="website-url"
-                name="websiteUrl"
+                name="Company Website URL"
                 type="url"
                 required
                 placeholder="https://company.com"
@@ -130,7 +130,7 @@ export function ContactForm() {
               </label>
               <textarea
                 id="target-audience"
-                name="targetAudience"
+                name="Target Audience"
                 required
                 rows={4}
                 placeholder="Who are your ideal buyers? Industries, roles, company size..."
