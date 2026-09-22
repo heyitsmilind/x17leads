@@ -11,24 +11,27 @@ const labelClass = 'text-sm font-medium text-foreground'
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [fullName, setFullName] = useState('')
+  const [companyEmail, setCompanyEmail] = useState('')
+  const [websiteUrl, setWebsiteUrl] = useState('')
+  const [targetAudience, setTargetAudience] = useState('')
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
     setIsSubmitting(true)
 
-    const formData = new FormData(event.currentTarget)
-    formData.set('form-name', 'strategy-session')
+    const params = new URLSearchParams()
+    params.append('form-name', 'strategy-session')
+    params.append('fullName', fullName)
+    params.append('companyEmail', companyEmail)
+    params.append('websiteUrl', websiteUrl)
+    params.append('targetAudience', targetAudience)
 
     try {
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(
-          Array.from(formData.entries()).map(([key, value]) => [
-            key,
-            String(value),
-          ]),
-        ).toString(),
+        body: params.toString(),
       })
 
       if (!response.ok) throw new Error('Form submission failed')
@@ -82,6 +85,8 @@ export function ContactForm() {
                   required
                   autoComplete="name"
                   placeholder="Jane Doe"
+                  value={fullName}
+                  onChange={(event) => setFullName(event.target.value)}
                   className={fieldClass}
                 />
               </div>
@@ -96,13 +101,15 @@ export function ContactForm() {
                   required
                   autoComplete="email"
                   placeholder="jane@company.com"
+                  value={companyEmail}
+                  onChange={(event) => setCompanyEmail(event.target.value)}
                   className={fieldClass}
                 />
               </div>
             </div>
 
             <div className="flex flex-col gap-2">
-              <label htmlFor="website" className={labelClass}>
+              <label htmlFor="website-url" className={labelClass}>
                 Company Website URL
               </label>
               <input
@@ -111,6 +118,8 @@ export function ContactForm() {
                 type="url"
                 required
                 placeholder="https://company.com"
+                value={websiteUrl}
+                onChange={(event) => setWebsiteUrl(event.target.value)}
                 className={fieldClass}
               />
             </div>
@@ -125,6 +134,8 @@ export function ContactForm() {
                 required
                 rows={4}
                 placeholder="Who are your ideal buyers? Industries, roles, company size..."
+                value={targetAudience}
+                onChange={(event) => setTargetAudience(event.target.value)}
                 className={`${fieldClass} resize-none`}
               />
             </div>
