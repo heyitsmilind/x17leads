@@ -76,8 +76,8 @@ export function ContactForm() {
                   Full Name
                 </label>
                 <input
-                  id="name"
-                  name="name"
+                  id="full-name"
+                  name="fullName"
                   type="text"
                   required
                   autoComplete="name"
@@ -90,8 +90,8 @@ export function ContactForm() {
                   Company Email
                 </label>
                 <input
-                  id="email"
-                  name="email"
+                  id="company-email"
+                  name="companyEmail"
                   type="email"
                   required
                   autoComplete="email"
@@ -106,8 +106,8 @@ export function ContactForm() {
                 Company Website URL
               </label>
               <input
-                id="website"
-                name="website"
+                id="website-url"
+                name="websiteUrl"
                 type="url"
                 required
                 placeholder="https://company.com"
@@ -120,8 +120,8 @@ export function ContactForm() {
                 Tell us about your target audience
               </label>
               <textarea
-                id="audience"
-                name="audience"
+                id="target-audience"
+                name="targetAudience"
                 required
                 rows={4}
                 placeholder="Who are your ideal buyers? Industries, roles, company size..."
