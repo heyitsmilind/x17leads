@@ -41,15 +41,17 @@ export function ContactForm() {
   return (
     <section id="contact" className="mx-auto max-w-6xl px-6 py-20 md:py-28">
       <div className="mx-auto max-w-2xl overflow-hidden rounded-3xl border border-primary/30 bg-card/50 p-8 shadow-2xl sm:p-12">
-        <div className="text-center">
-          <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Ready to scale your outbound sales?
-          </h2>
-          <p className="mt-4 text-pretty text-muted-foreground">
-            Tell us about your target audience and we&apos;ll map out a
-            campaign built to book meetings.
-          </p>
-        </div>
+        {!submitted && (
+          <div className="text-center">
+            <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              Ready to scale your outbound sales?
+            </h2>
+            <p className="mt-4 text-pretty text-muted-foreground">
+              Tell us about your target audience and we&apos;ll map out a
+              campaign built to book meetings.
+            </p>
+          </div>
+        )}
 
         <form
           name="strategy-session"
