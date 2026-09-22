@@ -1,3 +1,6 @@
+'use client'
+
+import { FormEvent, useState } from 'react'
 import { Button } from '@/components/ui/button'
 
 const fieldClass =
@@ -6,6 +9,35 @@ const fieldClass =
 const labelClass = 'text-sm font-medium text-foreground'
 
 export function ContactForm() {
+  const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    setIsSubmitting(true)
+
+    const formData = new FormData(event.currentTarget)
+    formData.set('form-name', 'strategy-session')
+
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(
+          Array.from(formData.entries()).map(([key, value]) => [
+            key,
+            String(value),
+          ]),
+        ).toString(),
+      })
+
+      if (!response.ok) throw new Error('Form submission failed')
+      setSubmitted(true)
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
   return (
     <section id="contact" className="mx-auto max-w-6xl px-6 py-20 md:py-28">
       <div className="mx-auto max-w-2xl overflow-hidden rounded-3xl border border-primary/30 bg-card/50 p-8 shadow-2xl sm:p-12">
@@ -24,9 +56,18 @@ export function ContactForm() {
           method="POST"
           action="/"
           data-netlify="true"
-          className="mt-10 flex flex-col gap-5"
+          onSubmit={handleSubmit}
+          className="mt-10 flex min-h-[384px] flex-col gap-5"
         >
-          <input type="hidden" name="form-name" value="strategy-session" />
+          {submitted ? (
+            <div className="flex min-h-[384px] items-center justify-center text-center">
+              <p className="max-w-md text-lg font-medium text-foreground">
+                Thank you for requesting a strategy session! We will be in touch shortly.
+              </p>
+            </div>
+          ) : (
+            <>
+              <input type="hidden" name="form-name" value="strategy-session" />
             <div className="grid gap-5 sm:grid-cols-2">
               <div className="flex flex-col gap-2">
                 <label htmlFor="name" className={labelClass}>
@@ -91,8 +132,10 @@ export function ContactForm() {
               size="lg"
               className="mt-2 h-12 w-full text-base font-semibold"
             >
-              Request a Free Strategy Session
+              {isSubmitting ? 'Sending...' : 'Request a Free Strategy Session'}
             </Button>
+            </>
+          )}
           </form>
       </div>
     </section>
