@@ -72,7 +72,7 @@ export function ContactForm() {
               <input type="hidden" name="form-name" value="strategy-session" />
             <div className="grid gap-5 sm:grid-cols-2">
               <div className="flex flex-col gap-2">
-                <label htmlFor="name" className={labelClass}>
+                <label htmlFor="full-name" className={labelClass}>
                   Full Name
                 </label>
                 <input
@@ -86,7 +86,7 @@ export function ContactForm() {
                 />
               </div>
               <div className="flex flex-col gap-2">
-                <label htmlFor="email" className={labelClass}>
+                <label htmlFor="company-email" className={labelClass}>
                   Company Email
                 </label>
                 <input
@@ -116,7 +116,7 @@ export function ContactForm() {
             </div>
 
             <div className="flex flex-col gap-2">
-              <label htmlFor="audience" className={labelClass}>
+              <label htmlFor="target-audience" className={labelClass}>
                 Tell us about your target audience
               </label>
               <textarea
