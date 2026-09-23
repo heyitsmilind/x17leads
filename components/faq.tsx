@@ -6,19 +6,19 @@ import { Plus } from 'lucide-react'
 const faqs = [
   {
     q: 'How do you make sure the leads are actually high quality?',
-    a: 'Every list is built around your exact ICP and then verified and enriched, so you only ever reach real, in-market decision-makers — never scraped or outdated contacts.',
+    a: "We don't rely on static, outdated database exports. We dynamically build target lists based on live buyer intent, run multi-tier verification checks to ensure sub-1% bounce rates, and manually review every single contact to guarantee exact ICP alignment before launching.",
   },
   {
     q: 'Do I need to set up my own email domains?',
-    a: 'No. We set up and warm dedicated sending domains for you, kept completely separate from your primary domain to protect your main reputation.',
+    a: 'No. We handle 100% of the technical setup for you. We deploy dedicated secondary sending domains equipped with proper authentication (SPF, DKIM, DMARC) and run multi-week warming cycles. Your main company domain stays 100% safe and completely untouched.',
   },
   {
     q: 'How do you protect deliverability and stay out of spam?',
-    a: 'We use warmed domains, strict sending volumes, authentication (SPF, DKIM, DMARC), and continuous inbox monitoring to keep your campaigns landing in the primary inbox.',
+    a: 'We protect domain health by distributing sending volume across multiple enterprise cloud inboxes, capping daily limits per inbox, and maintaining continuous warm-up sequences so your campaigns land straight in the primary inbox.',
   },
   {
     q: "What happens if you don't book any meetings for us?",
-    a: "We tie our success directly to yours. If we don't generate qualified opportunities that match your Ideal Customer Profile within the first 30 days, we will continue optimization and sending at our own expense until we do. We don't succeed unless your pipeline grows.",
+    a: "We operate on a pure pay-per-qualified-lead / performance model. We don't get paid until you get real pipeline results and booked meetings. Zero risk on your end.",
   },
 ]
 
