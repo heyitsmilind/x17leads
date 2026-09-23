@@ -12,16 +12,16 @@ const cases = [
       'Every list goes through a hands-on manual data cleaning process, so you only reach verified, in-market decision-makers and never waste a single send.',
   },
   {
-    metric: 'Risk-Free',
-    label: 'Start',
+    metric: '< 1%',
+    label: 'Email Bounce Rate',
     detail:
-      'We begin with low-friction, high-signal testing to find product-market fit quickly — proving the channel works before you scale.',
+      'Every contact is real-time verified right before sending, keeping bounce rates under 1% to permanently protect your sending reputation.',
   },
 ]
 
 export function Results() {
   return (
-    <section id="results" className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+    <section id="benchmarks" className="mx-auto max-w-6xl px-6 py-20 md:py-28">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
           Our minimum benchmarks
