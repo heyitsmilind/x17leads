@@ -3,21 +3,21 @@ import { Target, PenLine, CalendarCheck } from 'lucide-react'
 const steps = [
   {
     icon: Target,
-    title: 'ICP & Lead List Extraction',
+    title: 'Precision Targeting & Verification',
     description:
-      'We define your ideal customer profile and build a verified list of decision-makers who actually match it.',
+      'We map your exact ideal buyer parameters and pull live, intent-driven prospect data. Every lead goes through multi-tier verification checks to guarantee sub-1% bounce rates before outreach.',
   },
   {
     icon: PenLine,
-    title: 'Custom Copywriting & Sequencing',
+    title: 'Conversational Copywriting',
     description:
-      'We write personalized, human-sounding sequences engineered to start conversations, not get ignored.',
+      'We craft highly personalised, human-sounding email sequences focused on your unique offer. Every script is engineered to start sales conversations with high-level decision-makers.',
   },
   {
     icon: CalendarCheck,
-    title: 'Inbox Delivery & Meetings Booked',
+    title: 'Primary Delivery & Booked Calls',
     description:
-      'Warmed domains keep you out of spam while positive replies turn into meetings booked on your calendar.',
+      'We launch campaigns through isolated secondary domains straight into primary inboxes. Positive replies turn into qualified meetings on your calendar — and you only pay per qualified booked meeting.',
   },
 ]
 
