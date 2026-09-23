@@ -49,8 +49,8 @@ export function Hero() {
               nativeButton={false}
               render={<a href="#contact" />}
               className="h-12 px-6 text-base font-semibold"
-            >
-              Get Started
+> Get Qualified Meetings
+
               <ArrowRight className="size-4" />
             </Button>
             <Button
@@ -61,7 +61,7 @@ export function Hero() {
               className="h-12 px-6 text-base font-semibold"
             >
               <Play className="size-4" />
-              See How It Works
+              Explore Our Process
             </Button>
           </div>
           <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1.5 text-xs font-medium text-muted-foreground">

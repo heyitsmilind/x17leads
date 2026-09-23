@@ -37,6 +37,28 @@ export function Faq() {
           </p>
         </div>
 
+        <div className="mt-12 grid gap-4 md:grid-cols-3">
+          {[
+            {
+              title: '100% Risk-Free',
+              description: 'We operate on a pay-per-booked meeting model. You pay only for verified, booked meetings.',
+            },
+            {
+              title: 'Domain Protection First',
+              description: 'Dedicated isolated sending infrastructure ensures your core brand domain is never at risk.',
+            },
+            {
+              title: 'Custom ICP Precision',
+              description: 'Every campaign is built around your specific high-value buyer profile, never recycled leads.',
+            },
+          ].map((benefit) => (
+            <div key={benefit.title} className="rounded-xl border border-border bg-background p-5">
+              <h3 className="text-base font-semibold text-foreground">{benefit.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{benefit.description}</p>
+            </div>
+          ))}
+        </div>
+
         <div className="mt-12 flex flex-col gap-3">
           {faqs.map((item, i) => {
             const isOpen = open === i
