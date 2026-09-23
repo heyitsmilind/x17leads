@@ -145,7 +145,7 @@ export function ContactForm() {
               size="lg"
               className="mt-2 h-12 w-full text-base font-semibold"
             >
-              {isSubmitting ? 'Sending...' : 'Request a Free Strategy Session'}
+              {isSubmitting ? 'Sending...' : 'Get Your Custom Outbound Strategy'}
             </Button>
             </>
           )}

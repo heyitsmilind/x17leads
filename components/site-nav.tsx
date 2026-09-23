@@ -35,8 +35,8 @@ export function SiteNav() {
           nativeButton={false}
           render={<a href="#contact" />}
           className="h-10 px-5 text-sm font-semibold"
-        >
-          Get Free Leads
+> Book A Free Call
+
         </Button>
       </nav>
     </header>
