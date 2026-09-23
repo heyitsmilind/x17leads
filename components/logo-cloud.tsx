@@ -1,10 +1,12 @@
 const tools = [
-  { name: 'Instantly.ai', role: 'Sending' },
-  { name: 'Smartlead', role: 'Sending' },
-  { name: 'Clay', role: 'Data Enrichment' },
-  { name: 'Apollo', role: 'Prospecting' },
-  { name: 'MillionVerifier', role: 'List Hygiene' },
-  { name: 'Google Workspace', role: 'Infrastructure' },
+  { name: 'Instantly.ai', role: 'EMAIL SEQUENCER' },
+  { name: 'ScaledMail', role: 'INBOX INFRASTRUCTURE' },
+  { name: 'Google Workspace', role: 'PRIMARY PROVIDER' },
+  { name: 'Microsoft Outlook', role: 'ENTERPRISE PROVIDER' },
+  { name: 'AI Ark', role: 'LOOKALIKES AUDIENCE' },
+  { name: 'Clay', role: 'DATA ENRICHMENT' },
+  { name: 'Apollo', role: 'LIST BUILDING' },
+  { name: 'MillionVerifier', role: 'LIST HYGIENE' },
 ]
 
 export function LogoCloud() {
