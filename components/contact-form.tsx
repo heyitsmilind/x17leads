@@ -143,7 +143,7 @@ export function ContactForm() {
             <Button
               type="submit"
               size="lg"
-              className="mt-2 h-10 w-full cursor-pointer whitespace-normal break-words rounded-md py-3 text-sm leading-tight font-semibold transition-colors hover:bg-primary/80 sm:text-base md:py-2"
+              className="mt-8 h-auto w-full cursor-pointer whitespace-normal break-words rounded-md py-6 text-base leading-tight font-bold shadow-lg shadow-cyan-500/30 transition-colors hover:bg-primary/80 hover:shadow-cyan-400/40"
             >
               {isSubmitting ? 'Sending...' : 'Map My Outbound Strategy'}
             </Button>
