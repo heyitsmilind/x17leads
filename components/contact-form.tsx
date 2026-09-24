@@ -4,7 +4,7 @@ import { FormEvent, useState } from 'react'
 import { Button } from '@/components/ui/button'
 
 const fieldClass =
-  'w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/30'
+  'w-full rounded-lg border border-input bg-background px-4 py-3 text-base text-foreground placeholder:text-muted-foreground/60 outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/30'
 
 const labelClass = 'text-sm font-medium text-foreground'
 
@@ -42,8 +42,8 @@ export function ContactForm() {
   }
 
   return (
-    <section id="contact" className="mx-auto max-w-6xl px-6 py-20 md:py-28">
-      <div className="mx-auto max-w-2xl overflow-hidden rounded-3xl border border-primary/30 bg-card/50 p-8 shadow-2xl sm:p-12">
+    <section id="contact" className="mx-auto max-w-6xl px-4 py-20 sm:px-8 md:px-12 md:py-28">
+      <div className="mx-auto max-w-2xl overflow-hidden rounded-3xl border border-primary/30 bg-card/50 p-6 shadow-2xl sm:p-8 md:p-12">
         {!submitted && (
           <div className="text-center">
             <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -143,9 +143,9 @@ export function ContactForm() {
             <Button
               type="submit"
               size="lg"
-              className="mt-2 h-12 w-full text-base font-semibold"
+              className="mt-2 h-auto w-full whitespace-normal break-words py-3 text-sm leading-tight font-semibold sm:text-base md:py-2"
             >
-              {isSubmitting ? 'Sending...' : 'Get Your Custom Outbound Strategy'}
+              {isSubmitting ? 'Sending...' : 'Request a Free Strategy Session'}
             </Button>
             </>
           )}
