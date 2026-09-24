@@ -145,7 +145,7 @@ export function ContactForm() {
               size="lg"
               className="mt-2 h-10 w-full cursor-pointer whitespace-normal break-words rounded-md py-3 text-sm leading-tight font-semibold transition-colors hover:bg-primary/80 sm:text-base md:py-2"
             >
-              {isSubmitting ? 'Sending...' : 'Request a Free Strategy Session'}
+              {isSubmitting ? 'Sending...' : 'Map My Outbound Strategy'}
             </Button>
             </>
           )}
