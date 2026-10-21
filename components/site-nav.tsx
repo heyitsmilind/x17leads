@@ -13,10 +13,10 @@ export function SiteNav() {
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <Link
           href="#top"
-          className="text-lg font-medium tracking-[-0.04em] text-white"
+          className="inline-flex items-baseline gap-1 text-lg leading-none tracking-[-0.045em] text-white"
         >
-          <span className="font-normal">outbound</span>{' '}
-          <span className="font-extrabold text-primary">XP</span>
+          <span className="font-normal">outbound</span>
+          <span className="font-extrabold tracking-[-0.06em] text-primary">XP</span>
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">
