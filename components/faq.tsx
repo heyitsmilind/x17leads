@@ -46,7 +46,7 @@ export function Faq() {
         <div className="mx-auto max-w-5xl px-6 py-20 md:py-24">
           <div className="text-center">
             <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Why Choose x17 Leads
+              Why Choose outbound XP
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-pretty text-lg text-muted-foreground">
               Risk-free pipeline growth backed by domain safety and precision targeting.

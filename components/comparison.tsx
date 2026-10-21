@@ -46,7 +46,7 @@ export function Comparison() {
 
         <div className="rounded-2xl border border-primary/40 bg-primary/[0.06] p-8">
           <h3 className="text-sm font-semibold uppercase tracking-widest text-primary">
-            The x17 Way
+            The outbound XP Way
           </h3>
           <ul className="mt-6 flex flex-col gap-4">
             {x17Way.map((item) => (

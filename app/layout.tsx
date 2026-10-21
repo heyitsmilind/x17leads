@@ -10,7 +10,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'x17 leads — Qualified B2B Sales Meetings, Booked For You',
+  title: 'outbound XP — Qualified B2B Sales Meetings, Booked For You',
   description:
     'Done-for-you cold email campaigns that target your exact ideal buyers and book qualified sales meetings directly into your calendar.',
   generator: 'v0.app',

@@ -27,7 +27,7 @@ export function Results() {
           Our minimum benchmarks
         </h2>
         <p className="mt-4 text-pretty text-lg text-muted-foreground">
-          The performance standards every x17 campaign is built to hit before we ever scale.
+          The performance standards every outbound XP campaign is built to hit before we ever scale.
         </p>
       </div>
 
