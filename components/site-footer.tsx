@@ -30,9 +30,9 @@ export function SiteFooter() {
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 py-10 sm:flex-row">
           <div className="flex flex-col items-center gap-2 sm:flex-row sm:gap-6">
             <span className="text-base font-semibold tracking-tight text-foreground">
-              x17<span className="text-primary"> leads</span>
+              outbound <span className="text-primary">XP</span>
             </span>
-            <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} x17 leads. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} outbound XP. All rights reserved.</p>
           </div>
 
           <div className="flex items-center gap-6">

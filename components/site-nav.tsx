@@ -15,7 +15,7 @@ export function SiteNav() {
           href="#top"
           className="text-lg font-semibold tracking-tight text-foreground"
         >
-          x17<span className="text-primary"> leads</span>
+          outbound <span className="text-primary">XP</span>
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">
