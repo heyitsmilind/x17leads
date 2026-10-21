@@ -13,9 +13,12 @@ export function SiteNav() {
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <Link
           href="#top"
-          className="text-lg font-semibold tracking-tight text-foreground"
+          className="text-lg font-bold tracking-tight text-foreground"
         >
-          outbound <span className="text-primary">XP</span>
+          <span className="text-white">outbound</span>{' '}
+          <span className="rounded-md bg-primary px-1.5 py-0.5 font-extrabold text-primary-foreground shadow-sm">
+            XP
+          </span>
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">
